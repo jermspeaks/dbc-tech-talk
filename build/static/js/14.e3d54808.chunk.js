@@ -1,2 +1,0 @@
-webpackJsonp([14],{1417:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=a(1),o=a.n(r),n=a(597);a.n(n);t.default=o.a.createElement(n.Slide,{transition:["fade"],bgColor:"tertiary"},o.a.createElement(n.Heading,{size:6,textColor:"primary"},"Hacker News PWA"),o.a.createElement(n.Text,{textColor:"primary"},"Demo adds one last component:"),o.a.createElement(n.Text,{textColor:"primary"},"Redux"),o.a.createElement(n.Image,{src:"/images/logo-redux.png",width:200,height:200}))}});
-//# sourceMappingURL=14.e3d54808.chunk.js.map

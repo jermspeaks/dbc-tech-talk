@@ -15,6 +15,6 @@ export default (
 			Demo adds one last component:
 		</Text>
 		<Text textColor="primary">Redux</Text>
-		<Image src="/images/logo-redux.png" width={200} height={200} />
+		<Image src="images/logo-redux.png" width={200} height={200} />
 	</Slide>
 );

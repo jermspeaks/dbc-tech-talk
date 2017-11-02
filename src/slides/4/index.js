@@ -13,7 +13,7 @@ export default (
   <Slide transition={["fade"]} bgColor="secondary">
     <Heading size={6} textColor="tertiary" caps>
       React
-      <Image display="block" src="/images/logo-react.png" alt="React logo" height={200} />
+      <Image display="block" src="images/logo-react.png" alt="React logo" height={200} />
     </Heading>  
     <Text textColor="tertiary">
       Popular, powerful front-end framework.
