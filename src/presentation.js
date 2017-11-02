@@ -11,91 +11,68 @@ import {
   List,
   Quote,
   Slide,
-  Text,
-  CodePane
+  Text
 } from "spectacle";
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import theme from './theme';
+
+import "prismjs";
+import "prismjs/components/prism-jsx";
+
+require("prismjs/themes/prism-dark.css");
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 require("./styles/styles.css");
 
-const theme = createTheme(
-  {
-    primary: "white",
-    secondary: "#1F2022",
-    tertiary: "#03A9FC",
-    quartenary: "#CECECE"
-  },
-  {
-    primary: "Montserrat",
-    secondary: "Helvetica"
-  }
-);
+const slidesImports = [
+  import("./slides/1"),
+  import("./slides/2"),
+  import("./slides/3"),
+  import("./slides/4"),
+  import("./slides/5"),
+  import("./slides/6"),
+  import("./slides/7"),
+  import("./slides/8"),
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11")
+];
 
 export default class Presentation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      slides: Array(slidesImports.length).fill(<Slide key="loading" />)
+    };
+  }
+
+  componentDidMount() {
+    const importedSlides = [];
+    Promise.all(slidesImports).then((slidesImportsResolved) => {
+      slidesImportsResolved.forEach((slide) => {
+        importedSlides.push(slide.default);
+      });
+      this.setState({ slides: importedSlides });
+    });
+  }
+
   render() {
+    const { slides } = this.state;
+
     return (
       <Deck
         transition={["zoom", "slide"]}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide bgColor="secondary"></Slide>
-        <Slide transition={["zoom"]} bgColor="secondary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            Lunch n' Learn
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={2} fit>
-            Overview of React and the React Ecosystem
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          <Heading size={6} textColor="primary" caps>
-            Why is a Javascript library or framework useful?
-          </Heading>
-          <List textColor="primary">
-            <ListItem>JavaScript is awesome.</ListItem>
-            <ListItem>So awesome you might start using a lot of it in an app.</ListItem>
-            <ListItem>So much it might start to become a tangled mess.</ListItem>
-            <ListItem>Such a tangled mess it’ll be hard to debug and re-use your code later.</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            React
-            <img src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="React logo" height="200" />
-          </Heading>  
-          <Text textAlign="left" textColor="primary">
-            Popular, powerful front-end framework.
-          </Text>
-          <Text textAlign="left" textColor="primary">
-            Developed by and sponsored by Facebook.
-          </Text>
-          <List textColor="primary">
-            <ListItem>Make it easy to make reusable “view components”</ListItem>
-            <ListItem>These “encapsulate” logic and HTML into a class</ListItem>
-            <ListItem>Often make it easier to build modular applications</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary">Hello World</Heading>
-            <CodePane textAlign="left" language="javascript" source={require("raw!./assets/code/helloworld.example")} />
-          <Text textAlign="left" margin="5px 0 0">
-            <pre>
-              {`
-ReactDOM.render(
-  document.getElementById("app"), 
-  <Hello />
-);
-
-              `}
-            </pre>
-          </Text>
-        </Slide>
+        {
+          slides.map((slide, index) => {
+            return React.cloneElement(slide, {key: index});
+          })
+        }
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Typography
@@ -135,6 +112,9 @@ ReactDOM.render(
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
           </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading>Made with 💖 using React</Heading>
         </Slide>
       </Deck>
     );
