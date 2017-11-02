@@ -1,0 +1,18 @@
+class SharkWords extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			numWrong: 0,
+			guessed: new Set()
+		};
+	}
+
+    guessedWord () {  // "app_e" for "apple"
+        var word = "";
+
+        for (var ltr of this.props.answer)
+            word += this.state.guessed.has(ltr) ? ltr : "_";
+
+        return word;
+    }
+}

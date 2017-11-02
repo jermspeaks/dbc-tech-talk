@@ -1,0 +1,2 @@
+webpackJsonp([12],{1419:function(e,a,t){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var n=t(1),r=t.n(n),l=t(597);t.n(l);a.default=r.a.createElement(l.Slide,{transition:["fade"],bgColor:"secondary",textColor:"primary"},r.a.createElement(l.Heading,null,"Made with ",r.a.createElement("span",{role:"img","aria-label":"heart emoji"},"\ud83d\udc96")," using React"))}});
+//# sourceMappingURL=12.39eaa71c.chunk.js.map
