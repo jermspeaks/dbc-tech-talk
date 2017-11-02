@@ -1,0 +1,21 @@
+@app.route("/")
+def homepage():
+    return render_template("index.html")
+
+@app.route("/melons.json")
+def get_melons():
+    melons = [
+        {"type": "Watermlon", "price": randint(2, 20) / 2.0},
+        {"type": "Muskmelon", "price": randint(2, 5) / 2.0},
+        {"type": "Pupmelon", "price": randint(2, 80) / 2.0},
+        {"type": "Lemonmelon", "price": randint(2, 9) / 2.0}
+    ]
+    return jsonify(melons=melons)
+
+@app.route("/post-comment.json", methods=["POST"])
+def post_comment():
+    comment = request.data
+
+    # we could save this in a database here
+
+    return jsonify(message="Saved.")

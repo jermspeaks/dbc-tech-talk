@@ -1,0 +1,17 @@
+class SharkWords extends React.Component {
+    renderButtons() {
+        var buttons = [];
+
+        for (var ltr of "abcdefghijklmnopqrstuvwxyz")
+            buttons.push(
+                <button key={ ltr } value={ ltr }
+                        disabled={ this.state.guessed.has(ltr) }
+                        onClick={ this.handleGuess }>
+                    { ltr }
+                </button>)
+
+        return (
+            <div className="letters">{ buttons }</div>
+        );
+    }    
+}
