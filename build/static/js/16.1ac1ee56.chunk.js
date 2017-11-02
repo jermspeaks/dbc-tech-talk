@@ -1,0 +1,2 @@
+webpackJsonp([16],{1415:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=r(1),n=r.n(a),o=r(597);r.n(o);t.default=n.a.createElement(o.Slide,{transition:["fade"],bgColor:"tertiary"},n.a.createElement(o.Heading,{size:6,textColor:"primary"},"Ubermelon"),n.a.createElement(o.Text,{textColor:"primary"},n.a.createElement("a",{href:"http://localhost:5000",target:"_blank",rel:"noopener noreferrer"},"Demo Time")))}});
+//# sourceMappingURL=16.1ac1ee56.chunk.js.map

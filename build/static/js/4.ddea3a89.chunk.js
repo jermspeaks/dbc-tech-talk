@@ -1,0 +1,2 @@
+webpackJsonp([4],{1411:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=a(1),n=a.n(r),o=a(597);a.n(o);t.default=n.a.createElement(o.Slide,{transition:["fade"],bgColor:"tertiary"},n.a.createElement(o.Heading,{size:6,textColor:"primary"},"Shark Words"),n.a.createElement(o.CodePane,{textAlign:"left",lang:"jsx",source:a(1437)}))},1437:function(e,t,a){e.exports=a.p+"static/media/sharkwords3.01fb41ab.example"}});
+//# sourceMappingURL=4.ddea3a89.chunk.js.map

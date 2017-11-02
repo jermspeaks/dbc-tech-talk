@@ -1,0 +1,2 @@
+webpackJsonp([17],{1402:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a=t(1),o=t.n(a),r=t(597);t.n(r);n.default=o.a.createElement(r.Slide,{bgColor:"secondary"})}});
+//# sourceMappingURL=17.3fd39a6d.chunk.js.map
