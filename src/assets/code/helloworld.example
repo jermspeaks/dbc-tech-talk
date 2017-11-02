@@ -3,3 +3,8 @@ class Hello extends React.Component {
       return <p>Hi World!</p>
   }
 });
+
+ReactDOM.render(
+  document.getElementById("app"), 
+  <Hello />
+);
