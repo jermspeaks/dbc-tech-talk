@@ -12,10 +12,10 @@ export default (
         Why is a Javascript library or framework useful?
       </Heading>
       <List textColor="tertiary">
-        <ListItem>JavaScript is awesome.</ListItem>
-        <ListItem>So awesome you might start using a lot of it in an app.</ListItem>
-        <ListItem>So much it might start to become a tangled mess.</ListItem>
-        <ListItem>Such a tangled mess it’ll be hard to debug and re-use your code later.</ListItem>
+        <ListItem textSize="12">JavaScript is awesome.</ListItem>
+        <ListItem textSize="12">So awesome you might start using a lot of it in an app.</ListItem>
+        <ListItem textSize="12">So much it might start to become a tangled mess.</ListItem>
+        <ListItem textSize="12">Such a tangled mess it’ll be hard to debug and re-use your code later.</ListItem>
       </List>
     </Slide>
 );

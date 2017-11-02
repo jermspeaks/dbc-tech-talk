@@ -3,15 +3,8 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
   Deck,
-  Heading,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text
+  Slide
 } from "spectacle";
 
 // Import theme
@@ -19,6 +12,7 @@ import theme from './theme';
 
 import "prismjs";
 import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-python";
 
 require("prismjs/themes/prism-dark.css");
 
@@ -34,11 +28,18 @@ const slidesImports = [
   import("./slides/4"),
   import("./slides/5"),
   import("./slides/6"),
+  import("./slides/12"),
   import("./slides/7"),
   import("./slides/8"),
   import("./slides/9"),
   import("./slides/10"),
-  import("./slides/11")
+  import("./slides/11"),
+  import("./slides/13"),
+  import("./slides/14"),
+  import("./slides/15"),
+  import("./slides/16"),
+  import("./slides/17"),
+  import("./slides/18")
 ];
 
 export default class Presentation extends React.Component {
@@ -73,49 +74,6 @@ export default class Presentation extends React.Component {
             return React.cloneElement(slide, {key: index});
           })
         }
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading>Made with 💖 using React</Heading>
-        </Slide>
       </Deck>
     );
   }
