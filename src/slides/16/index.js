@@ -9,7 +9,7 @@ import {
 export default (
 	<Slide transition={["fade"]} bgColor="tertiary">
 		<Heading size={6} textColor="primary">
-			Hacker News PWA
+			<a href="https://github.com/stephenkingsley/hackerNews-pwa" target="_blank" rel="noopener noreferrer">Hacker News PWA</a>
 		</Heading>
 		<Text textColor="primary">
 			Demo adds one last component:
