@@ -1,4 +1,41 @@
-/*pre {
-	margin: 0;
-	font-size: 0.75em;
-}*/
+.language-jsx,
+.style {
+	font-size: 1.25em;
+}
+
+@-webkit-keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074D9; }
+  32%      { color: #2ECC40; }
+  48%      { color: #FFDC00; }
+  64%      { color: #B10DC9; }
+  80%      { color: #FF4136; }
+}
+@-moz-keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074D9; }
+  32%      { color: #2ECC40; }
+  48%      { color: #FFDC00; }
+  64%      { color: #B10DC9; }
+  80%      { color: #FF4136; }
+}
+@keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074D9; }
+  32%      { color: #2ECC40; }
+  48%      { color: #FFDC00; }
+  64%      { color: #B10DC9; }
+  80%      { color: #FF4136; }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $text-color;
+    text-decoration: none;
+    -webkit-animation: zomg 3s infinite;
+    -moz-animation: zomg 3s infinite;
+    animation: zomg 3s infinite
+}

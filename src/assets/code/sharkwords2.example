@@ -1,0 +1,14 @@
+class SharkWords extends React.Component {
+    handleGuess (evt) {
+        var letter = evt.target.value;
+        this.state.guessed.add(letter);
+        this.setState({guessed: this.state.guessed});
+
+        if (this.props.answer.indexOf(letter) === -1) {
+            this.setState({
+            	'numWrong': this.state.numWrong + 1
+            });
+        }
+    }
+}
+	
