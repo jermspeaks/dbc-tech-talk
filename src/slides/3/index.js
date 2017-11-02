@@ -3,7 +3,8 @@ import {
   Heading,
   ListItem,
   List,
-  Slide
+  Slide,
+  Cite
 } from "spectacle";
 
 export default (
@@ -17,5 +18,6 @@ export default (
         <ListItem textSize="12">So much it might start to become a tangled mess.</ListItem>
         <ListItem textSize="12">Such a tangled mess it’ll be hard to debug and re-use your code later.</ListItem>
       </List>
+      <Cite>Hackbright</Cite>
     </Slide>
 );

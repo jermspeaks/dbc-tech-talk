@@ -5,7 +5,8 @@ import {
   List,
   Slide,
   Text,
-  Image
+  Image,
+  Cite
 } from "spectacle";
 
 export default (
@@ -25,5 +26,6 @@ export default (
       <ListItem textSize="12">These “encapsulate” logic and HTML into a class</ListItem>
       <ListItem textSize="12">Often make it easier to build modular applications</ListItem>
     </List>
+    <Cite>Hackbright</Cite>
   </Slide>
 );  
